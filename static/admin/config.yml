@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: sidskaka/gatsby-full-stack-project
+  branch: master
+
+media_folder: static/assets
+public_folder: /assets
+ 
+collections: 
+  - name: product
+    label: Produit
+    folder: products
+    create: true
+    fields: 
+      - { name: title, required: true, label: Titre }
+      - { name: price, required: true, label: Prix }
+      - { name: description, required: true, label: Description, widget: markdown }
+      - { name: image, required: true, label: Image, widget: image }
+      - { name: couleur, required: true, label: Couleur }
+      - { name: taille, required: true, label: Taille }
+      - { name: categorie, required: true, label: Categorie }
+      - { name: sku, required: false, label: Sku}
+      - { name: path, required: false, label: Path }
+  - name: categorie
+    label: Categorie
+    folder: categories
+    create: true
+    fields: 
+      - { name: title, required: true, label: Titre }
+      - { name: description, required: true, label: Description, widget: markdown }
+      - { name: sku, required: false, label: Sku}
+      - { name: path, required: true, label: Path }
